@@ -25,9 +25,9 @@ namespace OrderFoodOnline.Controllers
       return View();
     }
     [HttpPost]
-    public IActionResult ShowOrder([FromQuery] OrderRecipeDetails details)
+    public IActionResult ShowOrder(OrderRecipeDetails orderRecipeDetails)
     {
-      return PartialView("_ShowOrder", details);
+      return PartialView("_ShowOrder", orderRecipeDetails);
     }
   }
 }

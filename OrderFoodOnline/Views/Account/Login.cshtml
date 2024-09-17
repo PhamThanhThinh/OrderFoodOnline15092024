@@ -1,0 +1,35 @@
+﻿@model OrderFoodOnline.Models.LoginViewModel;
+@{
+  ViewData["Title"] = "Đăng Nhập";
+}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+      <div>
+        <img src="/images/7174177733-6c0af1a0b2-b-4778-1583317457.jpg" class="w-100" />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+      <form autocomplete="off" method="post">
+        <div class="mb-3">
+          <h2 class="text-info">@ViewData["Title"]</h2>
+          <span>Đăng nhập với tài khoản của bạn</span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="Email">Email</label>
+          @Html.TextBoxFor(m => m.Email, new { @class = "form-controller", placeholder="Email" })
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="Password">Password</label>
+          @Html.TextBoxFor(m => m.Password, new { @class = "form-controller", type = "password" })
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-sm btn-success w-50 p-2" type="submit">Đăng Nhập</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/lib/jquery/dist/jquery.min.js">
+
+</script>

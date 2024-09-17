@@ -1,5 +1,72 @@
-﻿<div class="container-fluid">
+﻿@model OrderFoodOnline.Models.OrderRecipeDetails
+
+<div class="container-fluid">
   <div class="row">
-    <h1></h1>
+    <h1>Thực Đơn</h1>
+    <div class="col-12">
+      <img src="@Model.Image_URL" class="w-100" id="order-img" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <h2 class="text-dark">@Model.Title</h2>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <button type="button" class="btn btn-sm btn-success p-2">Đặt Hàng</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Quantity</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var item in Model.Ingredients)
+            {
+              <tr>
+                <td>@item.Description</td>
+                <td>@item.Quantity</td>
+                <td>@item.Unit</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="p-2">
+        <h2 class="text-dark">Chi Tiết Thanh Toán</h2>
+        <div class="row border-bottom border-2 border-dark">
+          <label class="col-6 col-form-label">Giá</label>
+          <div class="col-2">
+            <span>150</span>
+          </div>
+        </div>
+        <div class="row border-bottom border-2 border-dark">
+          <label class="col-6 col-form-label">Quantity</label>
+          <div class="col-2">
+            <span></span>
+            <input type="text" class="form-control" />
+            <span></span>
+          </div>
+        </div>
+        <div class="row border-bottom border-2 border-dark">
+          <label class="col-6 col-form-label">Phí Típ</label>
+          <label class="col-6 col-form-label">Miễn phí</label>
+        </div>
+        <div class="row">
+          <label class="col-6 col-form-label">Tổng</label>
+          <div class="col-2">
+            <span>150</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
