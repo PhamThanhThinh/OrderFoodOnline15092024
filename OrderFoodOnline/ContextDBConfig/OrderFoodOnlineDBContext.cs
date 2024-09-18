@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OrderFoodOnline.Models;
+using System;
 
 namespace OrderFoodOnline.ContextDBConfig
 {
@@ -15,5 +16,7 @@ namespace OrderFoodOnline.ContextDBConfig
     {
       base.OnModelCreating(builder);
     }
+
+    public DbSet<Order> Orders { get; set; }
   }
 }

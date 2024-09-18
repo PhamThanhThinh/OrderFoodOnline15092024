@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderFoodOnline.ContextDBConfig;
 
@@ -11,9 +12,10 @@ using OrderFoodOnline.ContextDBConfig;
 namespace OrderFoodOnline.Migrations
 {
     [DbContext(typeof(OrderFoodOnlineDBContext))]
-    partial class OrderFoodOnlineDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240918144338_18092024")]
+    partial class _18092024
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
